@@ -6,8 +6,10 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import me.dio.sacola.enumeration.FormaPagamento;
 
 import javax.persistence.*;
+import java.util.List;
 
 @AllArgsConstructor
 @Builder

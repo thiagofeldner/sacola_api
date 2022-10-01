@@ -18,10 +18,7 @@ public class Cliente {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
-  private String nomeCliente;
-
-  @Column(unique = true, updatable = false)
-  private String cpf;
+  private String nome;
 
   @Embedded
   private Endereco endereco;

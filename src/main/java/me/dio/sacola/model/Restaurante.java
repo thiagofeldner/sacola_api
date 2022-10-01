@@ -7,7 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.io.Serializable;
+
 import java.util.List;
 
 @AllArgsConstructor
@@ -16,14 +16,15 @@ import java.util.List;
 @Entity
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @NoArgsConstructor
-public class Restaurante implements Serializable {
+public class Restaurante {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
-  private String nomeRestaurante;
-  @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-  @JoinColumn(name = "restaurante_id")
-  private List<Produto> catalogoProdutos;
+  private String nome;
+
+  @OneToMany(cascade = CascadeType.ALL)
+  private List<Produto> cardapio;
+
   @Embedded
   private Endereco endereco;
 }

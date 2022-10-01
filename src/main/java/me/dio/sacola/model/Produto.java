@@ -19,7 +19,13 @@ public class Produto {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
-  private String nomeProduto;
-  private boolean disponivel;
+  private String nome;
   private double valorUnitario;
+
+  @Builder.Default
+  private Boolean disponivel = true;
+
+  @ManyToOne
+  @JsonIgnore
+  private Restaurante restaurante;
 }
