@@ -1,8 +1,6 @@
 Restaurante API
 Sacola API para Servir uma Aplicação com Domínio de Delivery
 
-Slides dia 1 ♥ Slides dia 2 ♥ Slides dia 3 ♥ Slides dia 4
-
 Status do Projeto
 Sacola API 💻 Em construção...
 
